@@ -4,7 +4,7 @@
 
 const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
-/* Opdracht  1: Cum Laude */console.log("-----Opdracht  1-----")
+/* Opdracht  1: Cum Laude */console.log("-----Opdracht  1a-----")
 
 /* 1a: Script schrijven  */
 // De administratie moet weten hoeveel studenten er dit blok cum laude zijn afgestudeerd (8 of hoger). Daar moeten namelijk speciale diploma's voor besteld worden.
@@ -16,17 +16,18 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6
 
-let cumLaude = 0;
+let numberOfEightOrHigher = 0;
 
 for (let i = 0; i < grades.length; i++) {
     if (grades[i] > 7) {
-        cumLaude = cumLaude + 1;
+        numberOfEightOrHigher = numberOfEightOrHigher + 1;
     }
 }
 
-console.log(cumLaude);
+console.log(numberOfEightOrHigher);
 
-/*  1b: Omschrijven tot een herbruikbare functie   */
+
+/*  1b: Omschrijven tot een herbruikbare functie   */console.log("-----Opdracht  1b-----")
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array met eindcijfers willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
@@ -36,6 +37,19 @@ console.log(cumLaude);
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
+function cumLaude(degrees) {
+    let numberOfEightOrHigher = 0;
+    for (let i = 0; i < degrees.length; i++) {
+        if (degrees[i] > 7) {
+            numberOfEightOrHigher = numberOfEightOrHigher + 1;
+        }
+    }
+    return numberOfEightOrHigher;
+}
+
+console.log(cumLaude(grades));
+console.log(cumLaude([6, 4, 5]));
+console.log(cumLaude([8, 9, 4, 6, 10]));
 
 
 
