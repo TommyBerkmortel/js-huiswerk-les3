@@ -13,7 +13,6 @@ function getEmailDomain(emailAdres) {
     domeinNaam = emailAdres.split("@");
     return domeinNaam[1];
 }
-
 console.log(getEmailDomain("n.eeken@novi-education.nl"));
 console.log(getEmailDomain("t.mellink@novi.nl"));
 console.log(getEmailDomain("a.wiersma@outlook.com"));
@@ -76,5 +75,4 @@ function checkEmailValidity(emailAdres) {
         return "False";
     }
 }
-
 console.log(emailOne, emailTwo, emailThree, emailFour,emailFive);
